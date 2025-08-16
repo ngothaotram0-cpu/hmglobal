@@ -1,0 +1,176 @@
+//LGEGMC-926
+// LGEES-494 : energy label 영역 변경
+.energy-label-wrap{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+  height: 24px;
+  @include screen(custom, max, $max-sm) {
+    height: 20px;
+  }
+  > a {
+    display: inline-flex;
+    text-decoration: none;
+  }
+  //LGEGMC-1296 : start
+  a > .label {
+    display: inline-block;
+    vertical-align: top;
+    width: 42px;
+    height: 24px;
+    font-size: 0;
+    @include screen(custom, max, $max-sm) {
+      width: 36px;
+      height: 20px;
+    }
+    > img {
+      width: 100%;
+      height: 100%;
+      // @include screen(custom, max, $max-sm) {
+      //   width: 100%;
+      // }
+    }
+  }
+  //LGEGMC-1296 : end
+  &:hover, &.keyMove {
+    .tooltip-link {
+      display:block;
+    }
+  }
+  .label-link {
+    display: inline-flex;
+  }
+}
+.tooltip-link{
+  display: none;
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 116px;
+  padding: 10px 0 0 0;
+  z-index: 5;
+  @include screen (custom, max, $max-sm) {
+    width: auto;
+    // left: calc(50% - 11.5vw);
+  }		
+  
+  .product-simple-info & {
+    left: 0;
+    transform: translateX(0);
+    [dir="rtl"] & {
+      right: 0;
+      left: auto;
+    }		
+  }
+  .tolltip-inner{
+    display: flex;
+    padding: 10px 8px;
+    background: $bg-white;
+    border-radius: 2px;
+    border: 1px solid #e4e4e4;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    &:before {
+      position: absolute;
+      content:'';
+      border-color: $line-gray;
+      border-style: solid;
+      border-width: 0 0 1px 1px;
+      background: $bg-white;
+      width: 11px;
+      height: 11px;
+      left: calc(50% - 6px);
+      top: 4px;
+      transform: rotate(135deg);			
+    }	   
+        
+    .product-simple-info & {
+      &:before {
+        left: 13px;
+      }
+      [dir="rtl"] & {
+        right:auto;
+        left:0;
+        &:before {
+          left: auto;
+          right: 18px;
+        }      
+      }	
+    }	
+    @include screen (custom, max, $max-sm) {
+      flex-direction: column;
+      padding: 5px 10px 10px;
+      &:before {
+        left: calc(50% - 5px);
+      }
+    }			
+  }
+  .link-text {
+    display: inline-block;
+    width: 45px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #797979; 
+    box-sizing: border-box;
+    @include font-family($font-bold);
+    line-height: 2;
+    color: #6b6b6b;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 2px;
+    @include screen (custom, max, $max-sm) {
+      display: block;
+      // width: 12vw;
+      .product-simple-info & {
+        width: 110px;
+      }
+      margin: 5px 0 0;
+    }
+  }
+}
+// LGEFR-650 start
+.repairability-index {
+  margin-top: 5px;
+  height: 24px;
+  .score {
+    position: relative;
+    display: inline-block;
+    padding-left: 45px;
+    max-width: 100%;
+    vertical-align: top;
+    [dir=rtl] & {
+      padding-left: 0;
+      padding-right: 45px;
+    }
+  }
+  .txt {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #6b6b6b;
+    line-height: 24px;
+    @include screen(custom, max, $max-sm) {
+      font-size: 12px;
+    }
+  }
+  .link-pdf {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 24px;
+    [dir=rtl] & {
+      left: auto;
+      right: 0;
+    }
+    img {
+      width: auto;
+      height: 100%;
+      vertical-align: top;
+    }
+  }
+}
+// LGEFR-650 end

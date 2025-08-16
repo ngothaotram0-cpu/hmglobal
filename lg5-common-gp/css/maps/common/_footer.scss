@@ -1,0 +1,1929 @@
+@import './svg'; //LGCOMSPEED-6(8th)
+.footer-box {
+	background:#f8f8f8;
+	margin:0 -15px;
+	// 20200325 START 박지영 : redmine 6615
+	word-break:normal;
+	word-wrap: normal;
+	// 20200325 END
+	[dir="rtl"] & {
+		 text-align: right;
+	}
+	@include screen(print) {
+		display:none;
+	}
+	.skip_nav {
+		max-width:1280px;
+		margin:0 auto;
+	}
+	// gpc0011 있는 경우 하위 높이 추가 
+	&.expand{
+		@include screen(custom, max, $max-sm) {
+			padding-bottom: 75px;
+		}
+	}
+	// EMP 20220126 START 박지영 -  Sign in 에서 Footer의 회색 영역 제거
+	.body-signin & {
+		.skip_nav,
+		.footer-component {
+			display: none;
+		}
+		.footer-bottom-box .footer-component {
+			display: block;
+		}
+	}
+	// EMP 20220126 END 박지영
+
+	.footer-component {
+		max-width:(1284px + 60px);
+		margin:0 auto;
+		padding: 0 30px;
+		@include screen(custom, max, $max-sm){
+			padding:0 24px;
+		}
+		.footer-caution {
+			font-size:14px;
+			line-height:20px;
+			padding:25px 0;
+			border-bottom:1px solid $line-gray;
+			color:$color-dimgray;
+			word-break: break-word; // LGEITF-982
+			//LGEIS-982, LGEIS-1044 Start
+			[data-countrycode="it"] & {
+				color: #545454;
+			}
+			//LGEIS-982, LGEIS-1044 End
+			.caution-header {
+				padding-bottom:25px;
+				margin-bottom:25px;
+				border-bottom:1px solid $line-gray;
+
+			}
+			.caution-tit {
+				display: block;
+				margin-bottom:12px;
+				color:$color-nightrider;
+				@include font-family($font-semibold);
+				a {
+					@include font-family($font-bold);
+					text-decoration: underline;
+					color: $color-nightrider;
+				}
+			}
+			.caution-wrap {
+    			overflow: hidden;				
+				display: flex;
+				height: 20px;
+				justify-content: space-between;
+				.caution-text {
+					max-width: calc(100% - 50px);
+					display: block;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					* {
+						display: inline;
+						margin: 0;
+						padding: 0;
+					}
+					br {
+						display: block;
+					}
+				}
+				.btn-more {
+					position: relative;
+					display: inline-block;
+					padding:0 12px 0 6px;
+					border:0;
+					color:$color-black;
+					@include font-family($font-regular);
+					font-size: 14px;
+					line-height: 20px;
+					background: none;
+					cursor: pointer;
+					text-transform: uppercase;
+					white-space: nowrap;
+					&:focus, &:hover {
+						text-decoration: underline;
+					}
+					&:after {
+						content:"";
+						position: absolute;
+						top:8px;
+						right:0;
+						display: block;
+						width:8px;
+						height:6px;
+						background:url($arrow-more-d) left top no-repeat; //LGCOMSPEED-6(8th)
+					}
+					[dir="rtl"] & {
+						padding:0 6px 0 12px;
+						&:after {
+							right:inherit;
+							left:0;
+						}
+					}
+					@include screen(custom, max, $max-sm) {
+						padding:0 12px 0 0;
+						[dir="rtl"] & {
+							padding:0 0 0 12px;
+						}
+					}
+				}
+				&.active {
+					display: block;
+					height: auto;
+					.caution-text, .caution-text p:first-child {
+						display: inline;
+						max-width: 100%;
+						white-space: inherit;
+						text-overflow: inherit;
+						@include screen(custom, max, $max-sm) {
+							height:auto;
+						}
+					}
+					.btn-more {
+						&:after {
+							transform:rotate(180deg);
+						}
+					}
+				}
+			}
+			a {
+				color:$color-carmine;
+				text-decoration:underline;
+			}
+			p {
+				margin:0 0 19px;
+				&:last-child {
+					margin:0;
+				}
+			}
+			strong, b {
+				@include font-family($font-bold);
+			}
+			h1, h2, h3, h4, h5, h6 {
+				font-size: 16px;
+				font-weight: 600;
+				color: #333;
+				line-height: 24px;
+				padding-bottom: 2px;
+				@include screen(custom, max, $max-sm){
+					padding-bottom: 7px;
+				}
+			}
+		}
+		.sub-contents.social {
+			@extend %clearfix;
+			padding:30px 0;
+			@include screen(custom, max, $max-sm){
+				padding:20px 0 18px;
+			}
+			.country-information-wrap{
+				a {
+					text-decoration: underline;
+				}
+				@include screen(custom, min, $min-md){
+					float: left;
+					padding-right:5px;
+					[dir="rtl"] & {
+						float: right;
+						padding-right:0;
+						padding-left:5px;
+					}
+				}
+				@include screen(custom, max, $max-sm){
+					&:only-child {
+						padding-bottom:5px;
+					}
+				}
+				.country-information {
+					position:relative;
+					padding:5px 0 0;
+					display:inline-block;
+					font-size:0;
+					.icon-wrap{
+						position:relative;
+						display:inline-block;
+						vertical-align:middle;
+						line-height:25px;
+						.flag-icon{
+							width:19px;
+							height:19px;
+							display:block;
+							border-radius:19px;
+							margin-right:11px;
+							[dir="rtl"] & {
+								margin-right:0;
+								margin-left:11px;
+							}
+						}
+						.earth-icon{
+							width:20px;
+							height:20px;
+							display:block;
+							margin-right: 9px;
+							[dir="rtl"] & {
+								margin-left: 9px;
+								margin-right: 0;
+							}
+							cursor:pointer;
+							&:hover+.icon-tooltip{
+								display:block;
+							}
+						}
+						.icon-tooltip{
+							display:none;
+							width: 272px;
+							position: absolute;
+							z-index: 1000;
+							bottom: 40px;
+    						left: -14px;
+							[dir="rtl"] & {
+								left: auto;
+								right: -14px;
+							}
+							&:before{
+								position: absolute;
+							    content: '';
+							    border-color: #e4e4e4;
+							    border-style: solid;
+							    border-width: 0 0 1px 1px;
+							    background: #fff;
+							    width: 11px;
+							    height: 11px;
+								bottom: -5px;
+								left: 18px;
+								[dir="rtl"] & {
+									left:auto;
+									right:18px;
+								}
+								transform: rotate(-45deg);
+							}
+							.tooltip-inner{
+								padding: 18px 24px;
+								border-radius: .25rem;
+							}
+						}
+					}
+
+					>a{
+						font-size:16px;
+						line-height:25px;
+						@include font-family($font-semibold);
+						display:inline-block;
+						vertical-align:middle;
+					}
+					.tooltip-area{
+						min-width:125px;
+						&.top-center{
+							margin-left:0;
+							transform: translateX(-50%);
+						}
+						.tooltip-inner{
+							padding:5px 10px;
+							a{
+								color:#333333;
+								font-size:14px;
+								line-height:20px;
+								@include font-family($font-regular);
+
+							}
+						}
+					}
+				}
+			}
+			.social-links {
+				@include screen(custom, min, $min-md){
+					text-align:right;
+					[dir="rtl"] & {text-align:left;}
+				}
+				@include screen(custom, max, $max-sm){
+					margin-top:26px;
+				}
+				li {
+					position:relative;
+					display:inline;
+					@include screen(custom, max, $max-sm) {
+						&:last-child {
+							.social-icon {
+								margin-right:0;
+							}
+						}
+					}
+					.tooltip-area{
+						min-width:160px;
+						.tooltip-inner{
+							padding:24px 34px 24px 24px;
+							a{
+								display:block;
+							}
+						}
+
+					}
+				}
+				.social-icon {
+					position:relative;
+					width:35px;
+					height:35px;
+					display:inline-block;
+					margin-left:8px;
+					[dir="rtl"] & {
+						margin-left:0;
+						margin-right:8px;
+					}
+					@include screen(custom, max, $max-lg){
+						margin-bottom:12px;
+						margin-left:0px;
+						margin-right:8px;
+						[dir="rtl"] & {
+							margin-left:8px;
+							margin-right:0px;
+						}
+					}
+					img {width:100%;height:auto;}
+					&.icon-facebook {
+						background:url('/lg5-common-gp/images/common/icons/facebook-circle-fill.svg') left top no-repeat;
+					}
+					&.icon-twitter {
+						background:url('/lg5-common-gp/images/common/icons/twitter-circle-fill.svg') left top no-repeat;
+					}
+					&.icon-google {
+						background:url('/lg5-common-gp/images/common/icons/google-circle-fill.svg') left top no-repeat;
+					}
+					&.icon-pinterest {
+						background:url('/lg5-common-gp/images/common/icons/pinterest-circle-fill.svg') left top no-repeat;
+					}
+					&.icon-youtube {
+						background:url('/lg5-common-gp/images/common/icons/youtube-circle-fill.svg') left top no-repeat;
+					}
+					&.icon-email {
+						background:url('/lg5-common-gp/images/common/icons/email-circle-fill.svg') left top no-repeat;
+					}
+					&.icon-instagram {
+						background:url('/lg5-common-gp/images/common/icons/instagram-circle-fill.svg') left top no-repeat;
+					}
+					&.icon-linked-in {
+						background:url('/lg5-common-gp/images/common/icons/linked-in-fill.svg') left top no-repeat;
+					}
+					&.icon-spiceworks {
+						background:url('/lg5-common-gp/images/common/icons/spiceworks-fill.svg') left top no-repeat;
+					}
+					&.icon-snapchat {
+						background:url('/lg5-common-gp/images/common/icons/snapchat-fill.svg') left top no-repeat;
+					}
+					// 20200421 START 이상현 - CN Wechat ui 추가. 디바이스 별 인터페이스 별도 적용.
+					&.mobile {
+						display:none;
+						@include screen(custom, max, $max-sm){
+							display:inline-block;
+						}
+					}
+					&.desktop {
+						display:inline-block;
+						@include screen(custom, max, $max-sm){
+							display:none;
+						}
+					}
+					// 20200421 END
+				}
+			}
+		}
+		.footer-contents {
+			@extend %clearfix;
+			padding-top:30px;
+			padding-bottom:30px;
+			border-bottom: 1px solid $line-gray;
+			display:flex;
+			// 20200409 START 박지영 - footer 데이터 없는 경우 디자인 오류 수정
+			width:100%;
+			// 20200409 END
+			@include screen(custom, max, $max-lg) {
+				width:100%;
+				display:flex;
+				flex-wrap: wrap;
+			}
+			&.cs-area {
+				.footer-contents-box {
+					flex-basis:25%;
+					.box-wrap {
+						[dir="ltr"] & {
+							padding-left: 12px;
+						}
+						[dir="rtl"] & {
+							padding-right: 12px;
+						}
+						@include screen(custom, max, $max-lg) {
+							[dir="ltr"] & {padding-left:0;}
+							[dir="rtl"] & {padding-right:0;}
+						}
+					}
+					&:first-child {
+						.box-wrap {
+							display:flex;
+							flex-wrap:wrap;
+							width:100%;
+							[dir="ltr"] & {padding-left:0;}
+							[dir="rtl"] & {padding-right:0;}
+						}
+					}
+				}
+				.footer-title {
+					display: block;
+					width:100%;
+				}
+				.phone-support {
+					flex-basis: 50%;
+				}
+				.support-text {
+					width:303px;
+					&:last-child {
+						flex: 1 1 auto; // [LGEPA-811]
+					}
+					[dir="ltr"] & {
+						padding-right:24px;
+						&:last-child {
+							padding-right:0;
+						}
+					}
+					[dir="rtl"] & {
+						padding-left:24px;
+						&:last-child {
+							padding-left:0;
+						}
+					}
+					@include screen(custom, max, 1360) {
+						flex: 1 1 auto; // [LGEPA-811]
+					}
+				}
+				@include screen(custom, max, $max-lg) {
+					.footer-contents-box,
+					.phone-support {
+						display: block;
+						flex-basis: 100%;
+					}
+				}
+			}
+			.no-link {
+				font-size:14px;
+				line-height:16px;
+				color:$color-dimgray;
+			}
+			a {
+				font-size:15px;
+				@include pxtoemLineHeight(15px, 17px);
+				color:$color-dimgray;
+				&.social-support-fb {
+					display:inline-block;
+					line-height:20px;
+					&:before {
+						display:inline-block;
+						content:'';
+						margin-right:8px;
+						[dir="rtl"] & {
+							margin-right:0;
+							margin-left:8px;
+						}
+						width:20px;
+						height:20px;
+						vertical-align:middle;
+						background:url('/lg5-common-gp/images/common/icons/facebook-circle-line-m.svg') left top no-repeat;
+					}
+				}
+				&.social-support-tw {
+					display:inline-block;
+					line-height:20px;
+					&:before {
+						display:inline-block;
+						content:'';
+						margin-right:8px;
+						[dir="rtl"] & {
+							margin-right:0;
+							margin-left:8px;
+						}
+						width:20px;
+						height:20px;
+						vertical-align:middle;
+						background:url('/lg5-common-gp/images/common/icons/twitter-circle-line-m.svg') left top no-repeat;
+					}
+				}
+			}
+			ul {
+				margin-bottom:0;
+
+				li {
+					margin-bottom:10px;
+					&.footer-title {
+						margin-bottom:20px;
+					}
+					&.social {
+						margin-bottom:4px;
+						a {
+							color:$color-nightrider;
+						}
+					}
+					&:last-child {
+						margin-bottom:0;
+					}
+				}
+			}
+			.footer-title {
+				margin-bottom:20px;
+				.no-link,
+				a,
+				h5 { // LGECI-307 20201124 웹접근성
+					display:inline-block;
+					font-size:17px;
+					@include pxtoemLineHeight(17px, 20px);
+					@include font-family($font-bold);
+					color:$color-black;
+					// 20200325 START 박지영 : redmine 6615
+					word-break: normal;
+					word-wrap: normal;
+					// 20200325 END
+				}
+				+ .footer-title {
+					margin-top:50px;
+				}
+				+ .support-text {
+					+ .footer-title {
+						margin-top:29px;
+					}
+				}
+				&:last-child {
+					margin-bottom:0;
+				}
+			}
+			.footer-sub-title {
+				> .no-link,
+				> a,
+				h6 { // LGECI-307 20201124 웹접근성
+					display: inline-block;
+					font-size:15px;
+					@include pxtoemLineHeight(15px, 19px);
+					@include font-family($font-semibold);
+					color:$color-nightrider;
+				}
+				ul {
+					margin-top:10px;
+					margin-bottom:11px;
+					li {
+						padding-left:10px;
+						[dir="rtl"] & {
+							padding-left:0;
+							padding-right:10px;
+						}
+					}
+					//LGEIS-321 start
+					&.paylogo{
+						max-width:150px;
+						li{
+							padding-left: 0;
+							display: inline-block;
+							margin-right: 2px;
+							margin-bottom: 3px;
+						}
+					}
+					//LGEIS-321 end
+				}
+			}
+
+			ul {
+				+ .footer-title {
+					margin-top:28px;
+				}
+			}
+
+			.link-bottom {
+				.link-wrap {
+					margin-bottom:0;
+				}
+			}
+			.footer-contents-box {
+				width:16.978%;
+				font-size:0;
+				display:flex;
+				align-content: flex-start;
+				flex-wrap: wrap;
+				// 20200429 START 이상현 - rtl 국가에서 footer 모바일 화면 수정
+				vertical-align:top;
+				.link-wrap {
+					display:inline-block;
+					vertical-align:top;
+					margin-bottom:50px;
+					//&:nth-child(5),
+					//&:nth-child(6),
+					//&:nth-child(7),
+					//&:nth-child(8){
+					//	margin-bottom:0;
+					//}
+					/*
+					.link-about-lg {
+						margin-top:55px;
+						@include screen(custom, max, $max-lg) {
+							margin-top:0;
+						}
+					}
+					*/
+				}
+
+				// 20200429 END
+				.box-wrap {
+					+ .box-wrap {
+						margin-top:24px;
+					}
+					.footer-title a {
+						text-decoration: underline;
+					}
+				}
+				.footer-contents-inner {
+					[dir="ltr"] & {
+						margin-right: 24px;
+						&:last-child {
+							margin-right:0;
+						}
+					}
+					[dir="rtl"] & {
+						margin-left: 24px;
+						&:last-child {
+							margin-left:0;
+						}
+					}
+					@include screen(custom, max, $max-lg) {
+						[dir="ltr"] & {margin-right: 0;}
+						[dir="rtl"] & {margin-left: 0;}
+					}
+					&:last-child {
+						[dir="ltr"] & {margin-right:0;}
+						[dir="rtl"] & {margin-left:0;}
+					}
+					.footer-title a {
+						text-decoration: none;
+					}
+					.link-wrap {
+						width:100%;
+						padding-left:0;
+						padding-right:0;
+						@include screen(custom, max, $max-lg) {
+							width:100%;
+						}
+					}
+				}
+				&.column-6 {
+					width:100%;
+					.box-wrap {
+						[dir="ltr"] & {
+							padding-left:24px;
+						}
+						[dir="rtl"] & {
+							padding-right:24px;
+						}
+					}
+				}
+				&.column-5 {
+					width:100% - 16.978%;
+					.box-wrap {
+						[dir="ltr"] & {
+							padding-left:24px;
+						}
+						[dir="rtl"] & {
+							padding-right:24px;
+						}
+					}
+					@include screen(custom, max, $max-lg) {
+						.box-wrap {
+							[dir="ltr"] & {
+								padding-left:0;
+							}
+							[dir="rtl"] & {
+								padding-right:0;
+							}
+						}
+					}
+				}
+				&.column-4 {
+					width:65.9%;
+					.box-wrap {
+						+ .box-wrap {
+							margin-top:0px;
+							.link-wrap {
+								margin-bottom:0;
+							}
+						}
+					}
+				}
+				&.column-3 {
+					width:50%;
+					flex-wrap: wrap;
+					.box-wrap {
+						+ .box-wrap {
+							margin-top:0px;
+							.link-wrap {
+								margin-bottom:0;
+							}
+						}
+					}
+					.link-wrap {
+						width: 194px;
+						&:nth-child(3n) {
+							[dir="ltr"] & {margin-right:0;}
+							[dir="rtl"] & {margin-left:0;}
+						}
+						[dir="ltr"] & {
+							margin-right:24px;
+						}
+						[dir="rtl"] & {
+							margin-left:24px;
+						}
+						@include screen(custom, max, $max-lg) {
+							width: 33.333%;
+							[dir="ltr"] & {margin-right: 0;}
+							[dir="rtl"] & {margin-left: 0;}
+						}
+						@include screen(custom, max, 1360){
+							&:nth-child(3n) {
+								[dir="ltr"] & {margin-right:24px;}
+								[dir="rtl"] & {margin-left:24px;}
+							}
+							@include screen(custom, max, $max-lg){
+								&:nth-child(3n) {
+									[dir="ltr"] & {margin-right:0;}
+									[dir="rtl"] & {margin-left:0;}
+								}
+							}
+						}						
+					}
+					&:nth-child(odd) {
+						[dir="ltr"] & {
+							padding-right: 12px;
+						}
+						[dir="rtl"] & {
+							padding-left: 12px;
+						}
+						@include screen(custom, max, $max-lg) {
+							[dir="ltr"] & {padding-right: 0;}
+							[dir="rtl"] & {padding-left: 0;}
+						}
+					}
+					&:nth-child(even) {
+						[dir="ltr"] & {
+							padding-left: 12px;
+						}
+						[dir="rtl"] & {
+							padding-right: 12px;
+						}
+						@include screen(custom, max, $max-lg) {
+							[dir="ltr"] & {padding-left: 0;}
+							[dir="rtl"] & {padding-right: 0;}
+						}
+						.footer-contents-inner {
+							width: 194px;
+							@include screen(custom, max, $max-lg) {
+								width: 33.333%;
+								.link-wrap {
+									width:100%;
+								}
+							}
+						}
+						ul {
+							padding-bottom:5px;
+						}
+						.support-text {
+							display:inline-block;
+						}
+					}
+				}
+				&.column-2 {
+					width:33.333%;
+					.box-wrap {
+						+ .box-wrap {
+							margin-top:0px;
+							.link-wrap {
+								margin-bottom:0;
+							}
+						}
+						[dir="ltr"] & {
+							padding-left:24px;
+						}
+						[dir="rtl"] & {
+							padding-right:24px;
+						}
+						.footer-title {
+							a {
+								text-decoration: underline;
+							}
+						}
+
+					}
+				}
+				&.column-1 {
+					.link-wrap {
+						width:100%;
+						[dir="ltr"] & {
+							padding-left:25px;
+						}
+						[dir="rtl"] & {
+							padding-right:25px;
+						}
+						@include screen(custom, max, $max-lg) {
+							padding-left:0;
+							padding-right:0;
+							width:25%;
+							[dir="ltr"] & {
+								padding-left:0;
+							}
+							[dir="rtl"] & {
+								padding-right:0;
+							}
+							.box-wrap {
+								+ .box-wrap {
+									margin-top:0;
+								}
+								width:100%;
+								[dir="ltr"] & {
+									padding-right:25px;
+								}
+								[dir="rtl"] & {
+									padding-left:25px;
+								}
+								display:inline-block;
+								vertical-align:top;
+							}
+						}
+					}
+					ul {
+						padding-bottom:5px;
+					}
+					.support-text {
+						display:inline-block;
+					}
+					&:first-child {
+						.footer-title a {
+							text-decoration: underline;
+						}
+					}
+				}
+				span:not(.no-link) {
+					display:block;
+					font-size:14px;
+					line-height:16px;
+					margin-bottom:8px;
+					color:$color-nightrider;
+					&:last-child {
+						margin-bottom:0;
+					}
+				}
+				.support-text {
+					display:inline-block;
+					vertical-align: top;
+					margin-top:0;
+					+ .link-text {
+						margin-top:32px;
+					}
+					+ .footer-title {
+						margin-top:24px;
+					}
+					em, strong, b {
+						font-style: normal;
+						color:$color-nightrider;
+						@include font-family($font-semibold);
+					}
+					p, span {
+						color:$color-dimgray;
+						@include pxtoemLineHeight(14px, 20px);
+					}
+					p {
+						margin-bottom:8px;
+						span:not(.no-link) {
+							margin-bottom:0;
+						}
+					}
+					.footer-sub-title {
+						display: block;
+						margin-bottom:10px;
+						@include font-family($font-semibold);
+						font-size: 16px;
+						color:$color-black;
+					}
+					a[href^="tel:"] {
+						text-decoration: underline;
+					}
+				}
+				@include screen(custom, max, $max-lg) {
+					width:100%;
+					padding-bottom:19px;
+					&:last-child {
+						border-bottom:0;
+						margin-bottom:0;
+						padding-bottom:0;
+					}
+					&.column-3,
+					&.column-4,
+					&.column-5 {
+						width:100%;
+					}
+
+				}
+				.ico-right {
+					text-decoration:none;
+					line-height:24px;
+					&:hover {
+						text-decoration:underline;
+					}
+					&:after {
+						background:url('/lg5-common-gp/images/common/icons/page-right.svg') 0 1px no-repeat;
+					}
+				}
+				.ico-blank {
+					text-decoration:none;
+					&:hover {
+						text-decoration:underline;
+					}
+					&:after {
+						background:url($blank-dimgray) 0 0 no-repeat; //LGCOMSPEED-6(8th)
+					}
+				}
+				&:last-child {
+					.link-wrap {
+						padding-right:0;
+						&:first-child {
+							.box-wrap {
+								.footer-title {
+									&:last-child {
+										margin-bottom:0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer-bottom-box {
+		background:$bg-nightrider;
+		.footer-bottom {
+			margin:0 15px;
+			padding:0 15px;
+			a {
+				&.ico-blank {
+					&:after {
+						@extend %linkicon;margin-left:6px;
+						background:url('/lg5-common-gp/images/common/icons/blank-white.svg') no-repeat 0 0;
+					}
+				}
+			}
+			&.banner-count1 .footer-component .bottom-links {
+				.links-left {
+					width:calc(100%-250px);
+				}
+				@include screen(custom, max, 950) {
+					.links-left {width: 100%;}
+					.links-right {
+						position: relative;
+						width:100%;
+						top:auto;
+						left:auto;
+						transform: none;
+						margin-top: 17px;
+					}
+				}
+			}
+			&.banner-count2 .footer-component .bottom-links {
+				.links-left {
+					width:calc(100%-500px);
+				}
+				@include screen(custom, max, 1080) {
+					.links-left {width: 100%;}
+					.links-right {
+						position: relative;
+						width:100%;
+						top:auto;
+						left:auto;
+						transform: none;
+						margin-top: 17px;
+					}
+				}
+			}
+			&.banner-count3 .footer-component .bottom-links {
+				.links-left {
+					width:calc(100%-750px);
+				}
+				@include screen(custom, max, 1155) {
+					.links-left {width: 100%;}
+					.links-right {
+						position: relative;
+						width:100%;
+						top:auto;
+						left:auto;
+						transform: none;
+						margin-top: 17px;
+					}
+				}
+			}
+			&.banner-count4 .footer-component .bottom-links {
+				.links-left {
+					width:calc(100%-1000px);
+				}
+				@include screen(custom, max, $max-lg) {
+					.links-left {width: 100%;}
+					.links-right {
+						position: relative;
+						width:100%;
+						top:auto;
+						left:auto;
+						transform: none;
+						margin-top: 17px;
+					}
+				}
+			}
+
+			.footer-component {
+				max-width:1284px;
+				margin:0 auto;
+				padding:22px 0;
+				font-size:0;
+				.bottom-links {
+					position:relative;
+					min-height: 58px;
+					.links-left {
+						width:100%;
+						min-width:364px;
+						ul{
+							@extend %clearfix;
+							li{
+								position: relative;
+								float: left;
+								margin-right:30px;
+								[dir="rtl"] & {
+									float: right;
+									margin-right:0;
+									margin-left:30px;
+								}
+								line-height: 18px;
+								/*
+								&:first-child {
+									margin-right:40px;
+									[dir="rtl"] & {
+										margin-right:0;
+										margin-left:40px;
+									}
+									&:after {
+										@include pseudo();
+										position:absolute;
+										right:-20px;
+										top:50%;
+										[dir="rtl"] & {
+											right:auto;
+											left:-20px;
+										}
+										margin-top:-5px;
+										width:1px;
+										height:10px;
+										background:$bg-dimgray;
+									}
+								}
+								*/
+							}
+						}
+						a {
+							font-size:14px;
+							line-height:24px;
+							color:$color-white;
+							@include font-family($font-regular);
+							display:inline-block;
+							position:relative;
+						}
+					}
+					.links-right {
+						position:absolute;
+						right:0;
+						[dir="rtl"] & {
+							right:auto;
+							left:0;
+						}
+						top: 0;
+						a {
+							font-size:14px;
+							line-height:19px;
+							color:$color-nightrider;
+							@include font-family($font-regular);
+							text-transform:none;
+							display:inline-block;
+							vertical-align:middle;
+							width:240px;
+							height:58px;
+							border-radius:3px 3px;
+							padding: 9px 0 0 62px;
+							word-break: normal;
+							background:$bg-white url("data:image/jpg;base64,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") 0 0 no-repeat;
+							[data-countrycode=cn] &,
+							[data-countrycode=tw] &,
+							[data-countrycode=jp] & {
+								font-size:13px;
+							}
+							// 20200429 START 이상현 - footer 정도경영 배너 ltr 화면 고정.
+							&[data-link-area="footer-jeongdo_management"] {
+								direction:ltr;
+								text-align:left;
+								&:after {
+									margin: 0 0 0 3px;
+									transform: none;
+								}
+							}
+							// [dir="rtl"] & {
+							// 	padding: 9px 62px 0 0;
+							// 	background:$bg-white url('/lg5-common-gp/images/common/footer/icon-jungdo.jpg') 95% 0 no-repeat;
+							// }
+							// 20200429 END
+							&:after {
+								background:url($link-right-nightrider) 0 1px no-repeat; //LGCOMSPEED-6(8th)
+							}
+							&.cn_link1 {
+								padding: 0;
+								background: none;
+								width: auto;
+								height: auto;
+								margin-right: 5px;
+								[dir="rtl"] & {
+									margin-right: 0;
+									margin-left: 5px;
+								}
+							}
+							&.cn_link2 {
+								width:263px;
+								color:#fff;
+								padding-left:49px;
+								background:$bg-nightrider url('/lg5-common-gp/images/common/footer/icon-cn01.png') 0 0 no-repeat;
+								[dir="rtl"] & {
+									padding-left:0;
+									padding-right:49px;
+									background:$bg-nightrider url('/lg5-common-gp/images/common/footer/icon-cn01.png') 100% 0 no-repeat;
+								}
+								span{
+									@include font-family($font-bold);
+								}
+							}
+							&.uk_link1 {
+								font-size: 18px;
+								background: #fff;
+								padding: 0;
+								width: 240px;
+								height: 58px;
+								line-height: 58px;
+								margin-right: 10px;
+								[dir="rtl"] & {
+									margin-right: 0;
+									margin-left: 10px;
+								}
+								text-align: center;
+							}
+							&.vn_link1 {
+								padding: 0;
+								background: none;
+								width: auto;
+								height: auto;
+								margin-right: 15px;
+								[dir="rtl"] & {
+									margin-right: 0;
+									margin-left: 15px;
+								}
+							}
+						}
+					}
+				}
+				.copyright {
+					margin-top:5px;
+					font-size:14px;
+					line-height:20px;
+					color:#b2b2b2;
+					@include font-family($font-regular);
+					a.description {
+						display: block;
+						text-decoration: underline;
+						margin-top: 5px;
+						margin-right:0 !important;
+						line-height:20px;
+						color:#b2b2b2;
+						&:after {
+							display:none !important;
+						}
+					}
+					.info{
+						margin-top: 8px;
+						// 20200511 START 박지영 - footer에 이메일 링크 추가
+						a {
+							color:#b2b2b2;
+							text-decoration: underline;
+						}
+						// 20200511 END
+					}
+				}
+			}
+		}
+	}
+	/*
+	[dir="rtl"] & {
+		.footer-main-contents{
+			&.business{
+				.footer-contents{
+					.footer-contents-box{
+						border-right:1px solid #e4e4e4;
+					}
+					.link-wrap{
+						@include screen(custom, min, $min-xl){
+							padding:0;
+						 }
+					}
+				}
+			}
+		}
+	}
+	*/
+	// 20200421 START 이상현 - CN Wechat ui 추가. 디바이스 별 인터페이스 별도 적용.
+	// Icon layer popup
+	.local-layer {
+		display:none;
+		background: $bg-white;
+		border: 1px solid $line-gray;
+		border-radius: 3px;
+		margin-top: 30px;
+		position: absolute;
+		z-index:1;
+		top: 100%;
+		right:-1px;
+		padding: 24px 34px 24px 24px;
+		[dir="rtl"] & {
+			right:auto;
+			left:-1px;
+			padding: 24px 24px 24px 34px;
+		}
+		&.active {
+			display:block;
+		}
+		&:before {
+			content:'';
+			width: 11px;
+			height: 11px;
+			border-color: $line-gray;
+			border-style: solid;
+			border-width: 1px 1px 0 0;
+			background: $bg-white;
+			transform: rotate(-45deg);
+			position: absolute;
+			top:-6px;
+			right:12px;
+			[dir="rtl"] & {
+				right:auto;
+				left:12px;
+			}
+		}
+		img {max-width:100%;}
+		// QR CODE
+		.qr-image {
+			width: 100px;
+			height: 100px;
+			background:$color-nightrider;
+		}
+		.btn-close {
+			position: absolute;
+			top: 12px;
+			border: none;
+			background: url("/lg5-common-gp/images/common/icons/popover-close.svg");
+			width: 12px;
+			height: 12px;
+			right: 12px;
+			[dir="rtl"] & {
+				right:auto;
+				left:12px;
+			}
+		}
+	}
+	// 20200421 END
+}
+.footer-box .visible-mobile {
+	.footer-component .footer-contents {
+		display: block;
+		margin-bottom:0;
+		padding-bottom:0;
+		padding-top:0;
+		border-bottom:0;
+		.footer-contents-box {
+			display:block;
+			border-bottom:0;
+			padding-bottom:0;
+			margin-bottom:30px;
+			padding-top:17px;
+			&:only-child {
+				margin-top:-1px;
+			}
+			.box-wrap:first-child {
+				.footer-title:first-child {
+					margin-top:9px;
+				}
+			}
+			.footer-title {
+				margin-bottom:14px;
+				font-size:18px;
+				line-height:24px;
+				color:$color-black;
+				+.footer-title {
+					margin-top:20px;
+				}
+				&:only-child {
+					margin-bottom:0;
+				}
+			}
+			.support-text {
+				display: block;
+				+.support-text {
+					margin-top:30px;
+				}
+			}
+			.link-wrap {
+				display:block;
+				width:100%;
+				padding-right:0;
+				margin-bottom:0;
+				.box-wrap {
+					.footer-title {
+						.no-link,
+						a {
+							font-size:17px;
+							line-height:21px;
+							color:$color-nightrider;
+							@include font-family($font-bold);
+						}
+						a {
+							text-decoration: underline;
+						}
+					}
+					.support-text {
+						display:inline-block;
+						width:50%;
+						margin-top:0;
+						vertical-align:top;
+						@include screen(custom, max, $max-sm) {
+							display: block;
+							width:100%;
+							a {
+								text-decoration: underline;
+							}
+						}
+						li,
+						span {
+							font-size: 14px;
+							color:$color-dimgray;
+							// LGEIN-626 start
+							a {
+								word-break: break-all;
+							}
+							// LGEIN-626 end
+							&:not(.no-link) {
+								margin-bottom:10px;
+							}
+						}
+					}
+					.footer-title .support-text {
+						width:100%;
+						padding-top:7px;
+					}
+					.ico-right {
+						margin-top:9px;
+					}
+				}
+			}
+			&.site-list {
+				padding-top:0;
+				margin-bottom:9px;
+				border-bottom:1px solid $line-gray;
+				.link-wrap {
+					border-top:1px solid $line-gray;
+					padding:0;
+					margin-top:-1px;
+				}
+
+				.category-block {
+					&:first-of-type {
+						.depth-category {
+							border-top:0;
+						}
+					}
+					.depth-2-list {
+						&.in-depth {
+							.depth-title {
+								&:first-child {
+									margin-top:10px;
+								}
+
+							}
+						}
+					}
+				}
+			}
+			.box-wrap {
+				+ .box-wrap {
+					margin-top:30px;
+				}
+				&.half {
+					@extend %clearfix;
+					.footer-title {
+						float:left;
+						[dir="rtl"] & {
+							float:right;
+						}
+						width:50%;
+						margin:0;
+					}
+				}
+				&:last-child {
+					ul {
+						@extend %clearfix;
+						li {
+							width:50%;
+							float:left;
+							[dir="rtl"] & {
+								float:right;
+							}
+							margin-bottom:0;
+						}
+					}
+					@extend %clearfix;
+					div.social {
+						width:50%;
+						float:left;
+						[dir="rtl"] & {
+							float:right;
+						}
+						margin-bottom:0;
+					}
+				}
+			}
+		}
+
+		.depth-1 {
+			position:relative;
+			display:block;
+			margin-bottom:0 !important;
+			@include font-family($font-semibold);
+			&.has-category {
+				background:url($accordion-open-nightrider) 100% center no-repeat; //LGCOMSPEED-6(8th)
+				[dir="rtl"] & {
+					background:url($accordion-open-nightrider) 0 center no-repeat; //LGCOMSPEED-6(8th)
+				}
+			}
+			&.on {
+				background:url('/lg5-common-gp/images/common/icons/accordion-close-nightrider.svg') 100% center no-repeat;
+				[dir="rtl"] & {
+					background:url('/lg5-common-gp/images/common/icons/accordion-close-nightrider.svg') 0 center no-repeat;
+				}
+				border-bottom:1px solid $line-gray;
+				span {
+					text-decoration: underline;
+				}
+				.a span { // 모바일 화면 footer의 1depth 클릭시 열리기만 하고 링크가 없는 case 처리 
+					text-decoration: none;
+				}
+			}
+			.a, // 모바일 화면 footer의 1depth 클릭시 열리기만 하고 링크가 없는 case 처리 
+			a {
+				display:block;
+				padding:18px 0;
+				span {
+					font-size:17px;
+					line-height:21px;
+					color: $color-black;
+					position:relative;
+					display:inline-block;
+					@include font-family($font-bold);
+				}
+			}
+
+		}
+		.depth-2 {
+			position:relative;
+			display:none;
+			overflow:hidden;
+			padding:14px 0 20px;
+			.category-block {
+				margin-bottom:-1px;
+				[dir="ltr"] & {
+					padding-left:10px;
+				}
+				[dir="rtl"] & {
+					padding-right:10px;
+				}
+			}
+			.depth-category {
+				position:relative;
+				display:block;
+				margin-bottom:0;
+				.category-button {
+					@include font-family($font-semibold);
+					display:block;
+					padding:16px 0 14px;
+					text-decoration:none;
+					span {
+						font-size:16px;
+						line-height:1;
+						color:$color-black;
+						position:relative;
+						display:inline-block;
+					}
+				}
+				&.has-category {
+					.category-button {
+						background:url('/lg5-common-gp/images/common/icons/accordion-expand-nightrider-m.svg') right 4px center no-repeat;
+						[dir="rtl"] & {
+							background:url('/lg5-common-gp/images/common/icons/accordion-expand-nightrider-m.svg') left 4px center no-repeat;
+						}
+					}
+					&.on {
+						.category-button {
+							background:url('/lg5-common-gp/images/common/icons/accordion-fold-nightrider-m.svg') right 4px center no-repeat;
+							[dir="rtl"] & {
+								background:url('/lg5-common-gp/images/common/icons/accordion-fold-nightrider-m.svg') left 4px center no-repeat;
+							}
+						}
+					}
+				}
+			}
+
+			.depth-1-category-link {
+				position:relative;
+				display:block;
+				padding:0 10px;
+				a {
+					@include font-family($font-semibold);
+					padding:15px 0 16px;
+					display:block;
+					font-size:16px;
+					line-height:1;
+					color:$color-black;
+				}
+			}
+
+		}
+		.depth-1-list,
+		.depth-2-list {
+			position:relative;
+			display:none;
+			overflow:hidden;
+
+			li {
+				&:last-child {
+					padding-bottom:0;
+				}
+				.no-link,
+				a {
+					display:inline-block;
+					font-size:16px;
+					line-height:1;
+					display:block;
+				}
+				span:not(.no-link) {
+					font-size:16px;
+					line-height:1;
+					color:$color-dimgray;
+				}
+			}
+
+			&.in-depth ul {
+				padding:6px 10px 26px;
+			}
+			//LGEIS-321 start
+			.paylogo{
+				padding: 0 0 15px 10px;
+				[dir="rtl"] & {
+					padding: 0 10px 15px 0;
+				}
+				li{
+					padding-left: 0;
+					display: inline-block;
+					margin-right: 2px;
+					margin-bottom: 3px;
+					>img{
+						width: 50px;
+					}
+				}
+			}
+			//LGEIS-321 end
+			span:not(.no-link) {
+				display:inline-block;
+			}
+		}
+		.button-layer {
+			position:absolute;
+			width:40px;
+			height:100%;
+			z-index:2;
+			right:0;
+			top:0;
+			background:none;
+		}
+		.depth-1-list {
+			ul {
+				padding: 30px 0 18px;
+			}
+			li {
+				.no-link,
+				a {
+					padding:0px 10px 15px;
+					color:$color-nightrider;
+					@include font-family($font-semibold);
+				}
+			}
+		}
+		.depth-2-list {
+			ul {
+				padding: 3px 10px 10px;
+			}
+			li {
+				.no-link,
+				a {
+					padding:0px 0 7px;
+					color:$color-dimgray;
+				}
+				&.depth-title {
+					margin-top:24px;
+					.no-link,
+					a {
+						color:$color-nightrider;
+						@include font-family($font-semibold);
+					}
+					+ .depth-title {
+						margin-top:22px;
+					}
+				}
+			}
+			.depth-2-category-link {
+				a {
+					@include font-family($font-semibold);
+					color:$color-black;
+				}
+			}
+			&.in-depth {
+				li {
+					padding-left:10px;
+					[dir="rtl"] & {
+						padding-left:0;
+						padding-right:10px;
+					}
+					&.depth-title {
+						padding-left:0;
+						[dir="rtl"] & {
+							padding-right:0;
+						}
+						.no-link,
+						a {
+							span {
+								@include font-family($font-semibold);
+								font-size:16px;
+								line-height:20px;
+								color:$color-black;
+								display:inline-block;
+								position:relative;
+
+							}
+						}
+						a {
+							&:hover {
+								span {
+									text-decoration:underline;
+								}
+							}
+						}
+					}
+
+				}
+				li + li.depth-title {
+					padding-top:0;
+				}
+			}
+		}
+	}
+	.footer-bottom-box {
+		.footer-bottom {
+			padding:0 24px;
+			margin:0;
+			.footer-component {
+				.bottom-links {
+					ul{
+						@extend %clearfix;
+						margin-bottom:9px;
+						li{
+							position: relative;
+							float: left;
+							margin-right:24px;
+							[dir="rtl"] & {
+								float: right;
+								margin-right:0;
+								margin-left:24px;
+							}
+							line-height: 18px;
+							/*
+							&:first-child {
+								margin-right:40px;
+								[dir="rtl"] & {
+									margin-right:0;
+									margin-left:40px;
+								}
+								&:after {
+									@include pseudo();
+									position:absolute;
+									right:-20px;
+									[dir="rtl"] & {
+										right:auto;
+										left:-20px;
+									}
+									top:50%;
+									margin-top:-5px;
+									width:1px;
+									height:10px;
+									background:$bg-dimgray;
+								}
+							}
+							*/
+						}
+					}
+					a {
+						font-size:14px;
+						line-height:24px;
+						color:$color-white;
+						@include font-family($font-regular);
+						display:inline-block;
+						position:relative;
+					}
+				}
+				.copyright {
+					margin-top:10px;
+					font-size:14px;
+					line-height:20px;
+				}
+
+			}
+			.links-bottom {
+				margin-left:-24px;
+				margin-right:-24px;
+				line-height:58px;
+				background:$bg-white;
+				.links-wrap {
+					display:block;
+					width:100%;
+					height:100%;
+					a {
+						position: relative;
+						font-size:14px;
+						line-height:19px;
+						text-transform:none;
+						color:$color-nightrider;
+						display:inline-block;
+						width:100%;
+						height:100%;
+						vertical-align: middle;
+						border-top: 1px solid $line-gray;
+						@include font-family($font-regular);
+						word-break: normal;
+						[data-countrycode=cn] &,
+						[data-countrycode=tw] &,
+						[data-countrycode=jp] & {
+							font-size:13px;
+						}
+						height: 58px;
+						padding: 18px 24px 0 80px;
+						[dir="rtl"] & {
+							padding: 18px 80px 0 24px;
+						}
+						background:url("data:image/jpg;base64,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") 14px center no-repeat;
+						[dir="rtl"] & {
+							@include screen(custom, max, $max-sm) {
+								background:url("data:image/jpg;base64,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") calc(100% - 23px) center no-repeat;
+							}
+						}
+						@include screen(custom, max, 320) {
+							padding-top:18px;
+							height:77px;
+						}
+
+						&:after {
+							background:url($link-right-nightrider) 0 1px no-repeat; //LGCOMSPEED-6(8th)
+						}
+						&.cn_link1,&.cn_link2,&.uk_link1,&.vn_link1{
+							background: none;
+							padding-left: 25px;
+						}
+						&.cn_link1{
+							padding-top: 9px;
+							@include screen(custom, max, $max-sm) {
+								padding: 9px 25px 0 24px;
+							}
+							@include screen(custom, max, 320) {padding-top:18px;}
+						}
+						&.cn_link2{
+							padding-top: 9px;
+							padding-left: 83px;
+							background:url('/lg5-common-gp/images/common/footer/icon-cn01.png') 22px center no-repeat;
+							[dir="rtl"] & {
+								background:url('/lg5-common-gp/images/common/footer/icon-cn01.png') calc(100% - 23px) center no-repeat;
+							}
+							span{
+								@include font-family($font-bold);
+							}
+							@include screen(custom, max, 320) {padding-top:18px;}
+						}
+						&.uk_link1{
+							color:$color-nightrider;
+							font-size: 18px;
+							line-height:38px;
+							padding-top:10px;
+							padding-bottom:10px;
+							@include screen(custom, max, 320) {padding-top:18px;padding-bottom:18px;line-height:41px;}
+							[dir="rtl"] & {
+								@include screen(custom, max, $max-sm) {
+									padding:18px 24px 0 80px;
+								}
+							}
+						}
+						&.vn_link1{
+							padding-top: 9px;
+							height: 78px;
+							[dir="rtl"] & {
+								@include screen(custom, max, $max-sm) {
+									padding:9px 25px 0 0;
+								}
+							}
+						}
+						&:first-child{
+							border-top: 0;
+						}
+					}
+				}
+			}
+			@include screen(custom, max, 375) {
+				[data-countrycode=cn] &,
+				[data-countrycode=tw] &,
+				[data-countrycode=jp] & {
+					.links-bottom .links-wrap a{padding-top: 10px;}
+				}
+			}
+			@include screen(custom, max, 320) {
+				[data-countrycode=cn] &,
+				[data-countrycode=tw] &,
+				[data-countrycode=jp] & {
+					.links-bottom .links-wrap a{padding-top: 18px;}
+				}
+			}
+		}
+	}
+}
+
+.hidden-mobile {display:block;}
+.visible-mobile {display:none;}
+@include screen(custom, max, $max-sm) {
+	.hidden-mobile { display:none;}
+	.visible-mobile {display:block;}
+}
+
+// [Start] LGESA-415
+// 기존 사용되는 paylogo 와 동일한 클래스 사용하여, 기존에 잘못 사용되던 마크업까지 처리될 수 있게 작업함.
+.footer-contents .paylogo {
+	img {
+		height: 26px;
+		margin-right: 8px;
+		margin-bottom: 8px;
+		[dir="rtl"] & {
+			margin-right: 0;
+			margin-left: 8px;
+		}
+		.visible-mobile & {
+			margin-bottom: 18px;
+		}
+	}
+	&.big-logo {
+		img {
+			height: 52px;
+		}
+	}
+}
+// [End] LGESA-415
+
+// [Start] LGEPE-333
+.banner-img-content {
+	display: block;
+	background-color: #fff;
+	img {
+		height: 65px;
+		border-radius: 5px;
+	}
+	@include screen(custom, max, $max-sm) {
+		margin: 15px 0;
+		border: 1px solid $line-gray;
+		border-radius: 5px;
+		padding: 16px 0 15px;
+		text-align: start;
+		img {
+			height: 18px;
+		}
+	}
+}
+// [End] LGEPE-333

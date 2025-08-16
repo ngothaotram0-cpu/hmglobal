@@ -1,0 +1,629 @@
+@charset 'UTF-8';
+
+// 각국가 하단에 고정되는 버튼들 style 강제적용을 위한 scss
+// uk 3rd
+.cp22,
+.cp11 {
+  transition: all 0.1s !important;
+}
+
+.intercom-lightweight-app {
+  &.gang-hide {
+    display: none !important;
+  }
+
+  .intercom-lightweight-app-launcher {
+    bottom: 80px !important;
+    right: 20px !important;
+  }
+
+  .intercom-namespace {
+    right: 20px !important;
+    bottom: 120px !important;
+  }
+
+  &.cp22 {
+    .intercom-lightweight-app-launcher {
+      bottom: 135px !important;
+    }
+
+    .intercom-namespace {
+      bottom: 175px !important;
+    }
+  }
+
+  @include screen(custom, max, $max-sm) {
+    .intercom-lightweight-app-launcher {
+      bottom: 20px !important;
+      right: auto !important;
+      left: 12px !important;
+    }
+
+    .intercom-namespace {
+      right: auto !important;
+      left: 12px !important;
+    }
+
+    &.cp11 {
+      .intercom-lightweight-app-launcher {
+        bottom: 70px !important;
+      }
+
+      .intercom-namespace {
+        bottom: 115px !important;
+      }
+
+      &.cp22 {
+        .intercom-lightweight-app-launcher {
+          bottom: 130px !important;
+        }
+
+        .intercom-namespace {
+          bottom: 175px !important;
+        }
+      }
+    }
+
+    &.cp22 {
+      .intercom-lightweight-app-launcher {
+        bottom: 70px !important;
+      }
+
+      .intercom-namespace {
+        bottom: 115px !important;
+      }
+    }
+  }
+}
+
+#intercom-container {
+  &.gang-hide {
+    display: none !important;
+  }
+
+  .intercom-launcher-frame {
+    bottom: 80px !important;
+    right: 20px !important;
+  }
+
+  .intercom-launcher-badge-frame {
+    right: 20px !important;
+    bottom: 120px !important;
+  }
+
+  &.cp22 {
+    .intercom-launcher-frame {
+      bottom: 135px !important;
+    }
+
+    .intercom-launcher-badge-frame {
+      bottom: 175px !important;
+    }
+  }
+
+  @include screen(custom, max, $max-sm) {
+    .intercom-launcher-frame {
+      bottom: 20px !important;
+      right: auto !important;
+      left: 12px !important;
+    }
+
+    .intercom-launcher-badge-frame {
+      right: auto !important;
+      left: 12px !important;
+      bottom: 60px !important;
+    }
+
+    &.cp11 {
+      .intercom-launcher-frame {
+        bottom: 70px !important;
+      }
+
+      .intercom-launcher-badge-frame {
+        bottom: 115px !important;
+      }
+
+      &.cp22 {
+        .intercom-launcher-frame {
+          bottom: 130px !important;
+        }
+
+        .intercom-launcher-badge-frame {
+          bottom: 175px !important;
+        }
+      }
+    }
+
+    &.cp22 {
+      .intercom-launcher-frame {
+        bottom: 70px !important;
+      }
+
+      .intercom-launcher-badge-frame {
+        bottom: 115px !important;
+      }
+    }
+  }
+
+  .intercom-messenger-frame {
+    bottom: 150px !important;
+    right: 90px !important;
+
+    @include screen(custom, max, $max-sm) {
+      bottom: 140px !important;
+      right: auto !important;
+      left: 0 !important;
+    }
+  }
+
+  .intercom-borderless-frame {
+    transform: translateX(-65px);
+  }
+}
+
+.epromotor-widget-area {
+  bottom: 80px !important;
+  right: 20px !important;
+
+  [dir="rtl"] & {
+    right: auto !important;
+    left: 20px !important;
+  }
+
+  &.gang-hide {
+    display: none !important;
+  }
+
+  &.cp22 {
+    bottom: 135px !important;
+  }
+
+  @include screen(custom, max, $max-sm) {
+    bottom: 20px !important;
+    right: auto !important;
+    left: 12px !important;
+
+    [dir="rtl"] & {
+      left: auto !important;
+      right: 12px !important;
+    }
+
+    &.cp11 {
+      bottom: 70px !important;
+
+      &.cp22 {
+        bottom: 130px !important;
+      }
+    }
+
+    &.cp22 {
+      bottom: 70px !important;
+    }
+  }
+}
+
+.ommi-widget {
+  position: relative !important;
+  right: auto !important;
+  left: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+
+  @include screen(custom, max, $max-sm) {
+    align-items: flex-start !important;
+  }
+}
+
+ommi-widget {
+  position: fixed;
+  bottom: 80px !important;
+  right: 20px !important;
+  z-index: 100000;
+  opacity: 0;
+
+  &.ready {
+    opacity: 1;
+  }
+
+  &.gang-hide {
+    display: none !important;
+  }
+
+  &.cp22 {
+    bottom: 135px !important;
+  }
+
+  @include screen(custom, max, $max-sm) {
+    bottom: 20px !important;
+    right: auto !important;
+    left: 12px !important;
+
+    &.cp11 {
+      bottom: 70px !important;
+
+      &.cp22 {
+        bottom: 130px !important;
+      }
+    }
+
+    &.cp22 {
+      bottom: 70px !important;
+    }
+  }
+}
+
+#callbell-iframe {
+  bottom: 55px !important;
+  right: 0 !important;
+
+  &.gang-hide {
+    display: none !important;
+  }
+
+  &.cp22 {
+    bottom: 110px !important;
+  }
+
+  @include screen(custom, max, $max-sm) {
+    bottom: 45px !important;
+    right: -10px !important;
+
+    &.cp11 {
+      bottom: 100px !important;
+
+      &.cp22 {
+        bottom: 160px !important;
+      }
+    }
+
+    &.cp22 {
+      bottom: 100px !important;
+    }
+  }
+}
+
+.floating-whatsapp {
+  bottom: 145px !important;
+  right: 20px !important;
+
+  [dir="rtl"] & {
+    right: auto !important;
+    left: 20px !important;
+  }
+
+  &.gang-hide {
+    display: none !important;
+  }
+
+  &.cp22 {
+    bottom: 200px !important;
+  }
+
+  @include screen(custom, max, $max-sm) {
+    bottom: 20px !important;
+    right: auto !important;
+    left: 12px !important;
+
+    [dir="rtl"] & {
+      left: auto !important;
+      right: 12px !important;
+    }
+
+    &.cp11 {
+      bottom: 135px !important;
+
+      &.cp22 {
+        bottom: 195px !important;
+      }
+    }
+
+    &.cp22 {
+      bottom: 140px !important;
+    }
+  }
+
+  // LGEBR-1034
+  [data-countrycode="br"] & {
+    bottom: 80px !important;
+    width: 50px;
+    height: 50px;
+
+    &.cp22 {
+      bottom: 135px !important;
+    }
+
+    @include screen(custom, max, $max-sm) {
+      right: 12px !important;
+      left: auto !important;
+      bottom: 70px !important;
+      width: 45px;
+      height: 45px;
+
+      [dir="rtl"] & {
+        left: auto !important;
+        right: 12px !important;
+      }
+
+      &.cp11 {
+        bottom: 120px !important;
+
+        &.cp22 {
+          bottom: 180px !important;
+        }
+      }
+
+      &.cp22 {
+        bottom: 120px !important;
+      }
+    }
+
+    .btn-whatsapp {
+      padding: 0;
+      width: 50px;
+      height: 50px;
+
+      @include screen(custom, max, $max-sm) {
+        width: 45px;
+        height: 45px;
+      }
+
+      img {
+        margin-right: -2px;
+        width: 25px;
+      }
+    }
+  }
+
+  // LGEBR-1034
+  // LGECO-277 start
+  [data-countrycode="co"] & {
+    bottom: 80px !important;
+    width: 50px;
+    height: 50px;
+
+    &.cp22 {
+      bottom: 135px !important;
+    }
+
+    @include screen(custom, max, $max-sm) {
+      bottom: 75px !important;
+
+      &.cp11 {
+        bottom: 125px !important;
+
+        &.cp22 {
+          bottom: 185px !important;
+        }
+      }
+
+      &.cp22 {
+        bottom: 125px !important;
+      }
+    }
+
+    .btn-whatsapp {
+      padding: 0;
+      width: 50px;
+      height: 50px;
+
+      img {
+        width: 25px;
+      }
+    }
+  }
+
+  // LGECO-277 end
+  //LGEAE-628 Start
+  [data-countrycode="eastafrica"] &,
+  // LGEEASTAF-206 : eastafrica add
+  [data-countrycode="ae"] &,
+  [data-countrycode="ae_ar"] & {
+    bottom: 80px !important;
+    width: 50px;
+    height: 50px;
+
+    &.cp22 {
+      bottom: 135px !important;
+    }
+
+    @include screen(custom, max, $max-sm) {
+      bottom: 15px !important;
+      width: 45px;
+      height: 45px;
+
+      &.cp11 {
+        bottom: 70px !important;
+
+        &.cp22 {
+          bottom: 130px !important;
+        }
+      }
+
+      &.cp22 {
+        bottom: 70px !important;
+      }
+    }
+
+    .btn-whatsapp {
+      padding: 0;
+      width: 50px;
+      height: 50px;
+
+      @include screen(custom, max, $max-sm) {
+        width: 45px;
+        height: 45px;
+      }
+
+      img {
+        width: 25px;
+        margin-right: -2px;
+      }
+    }
+  }
+
+  //LGEAE-628 End
+}
+
+//LGECL-326 Start
+#chat-widget-container {
+  bottom: 63px !important;
+  right: 13px !important;
+
+  [dir="rtl"] & {
+    right: auto !important;
+    left: 13px !important;
+  }
+
+  &.gang-hide {
+    display: none !important;
+  }
+
+  &.cp22 {
+    bottom: 135px !important;
+  }
+
+  @include screen(custom, max, $max-sm) {
+    bottom: 0 !important;
+    right: auto !important;
+    left: -5px !important;
+    max-height: calc(100% - 120px) !important; //[LGEITF-701]
+
+    [dir="rtl"] & {
+      left: auto !important;
+      right: -5px !important;
+    }
+
+    &.cp11 {
+      bottom: 50px !important;
+
+      &.cp22 {
+        bottom: 110px !important;
+      }
+    }
+
+    &.cp22 {
+      bottom: 50px !important;
+    }
+  }
+}
+
+//LGECL-326 End
+
+//uk spr chatbox position style
+#spr-live-chat-app {
+  &.gang-hide {
+    .spr-chat__trigger-box {
+      display: none !important;
+    }
+  }
+
+  .spr-chat__trigger-box {
+    bottom: 80px !important;
+    right: 22px !important;
+  }
+
+  &.cp22 {
+    .spr-chat__trigger-box {
+      bottom: 135px !important;
+    }
+  }
+
+  @include screen(custom, max, $max-sm) {
+    .spr-chat__trigger-box {
+      bottom: 15px !important;
+      right: auto !important;
+      left: 12px !important;
+    }
+
+    &.cp11 {
+      .spr-chat__trigger-box {
+        bottom: 70px !important;
+      }
+
+      &.cp22 {
+        .spr-chat__trigger-box {
+          bottom: 130px !important;
+        }
+      }
+    }
+
+    &.cp22 {
+      .spr-chat__trigger-box {
+        bottom: 70px !important;
+      }
+    }
+  }
+}
+
+body {
+  .spr-chat__box {
+    bottom: 200px !important;
+  }
+
+  &.compare-sticky-showing {
+    .spr-chat__box {
+      @include screen(custom, max, $max-sm) {
+        bottom: 310px !important;
+      }
+    }
+
+    &.compare-sticky-min {
+      .spr-chat__box {
+        @include screen(custom, max, $max-sm) {
+          bottom: 200px !important;
+        }
+      }
+    }
+  }
+}
+
+// menu open bottom fixbtn
+body {
+
+  &.m-menu-open,
+  &.band-scroll,
+  &.modal-open {
+
+    .intercom-lightweight-app,
+    .intercom-lightweight-app *,
+    #intercom-container *,
+    .epromotor-widget-area,
+    ommi-widget,
+    #callbell-iframe,
+    .floating-whatsapp,
+    #chat-widget-container,
+    .spr-chat__trigger-box,
+    .spr-chat__box {
+      z-index: 1 !important;
+    }
+  }
+}
+
+.grecaptcha-badge {
+  bottom: 90px !important;
+
+  @include screen(custom, max, $max-sm) {
+    bottom: 70px !important;
+  }
+}
+
+// [Start] LGCOMMON-378
+.fixed-chat {
+  @include screen(custom, max, $max-sm) {
+    bottom: 15px !important;
+
+    &.cp11 {
+      bottom: 70px !important;
+
+      &.cp22 {
+        bottom: 130px !important;
+      }
+    }
+
+    &.cp22 {
+      bottom: 70px !important;
+    }
+  }
+}
+
+// [End] LGCOMMON-378

@@ -1,0 +1,10 @@
+@charset 'UTF-8';
+
+// LGECS-317 
+// 외부 iframe 관련 stylesheet 가이드 동영상 관련 bg 소스
+.bc-iframe,
+.bc-iframe body,
+.vjs-poster,
+.video-js {
+  background-color: #fff !important;
+}

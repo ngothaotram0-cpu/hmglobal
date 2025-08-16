@@ -1,0 +1,189 @@
+@charset 'UTF-8';
+@import './setting/variables';
+
+.GPC0054 {
+
+  // bg, color 추가
+  &.bg-black {
+    background-color: #000;
+
+    .title-wrap {
+      .title {
+        color: $color-white;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          color: $color-white;
+        }
+      }
+
+      .copy {
+        color: #f8f8f8;
+      }
+    }
+  }
+
+  &.bg-dark-gray {
+    background-color: #333;
+
+    .title-wrap {
+      .title {
+        color: $color-white;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          color: $color-white;
+        }
+      }
+
+      .copy {
+        color: #f8f8f8;
+      }
+    }
+  }
+
+  &.bg-gray {
+    background-color: #f8f8f8;
+  }
+
+  &.bg-white {
+    background-color: #fff;
+  }
+
+  // bg, color 추가
+  .title-wrap {
+    width: 100%;
+    padding: 10px 30px 0;
+    max-width: (1284px+60px);
+    margin: 0 auto 44px;
+    @extend %clearfix;
+
+    @include screen(custom, max, ($max-lg)) {
+      padding-top: 15px;
+    }
+
+    @include screen(custom, max, ($max-sm)) {
+      padding: 33px 24px 0;
+      margin-bottom: 35px;
+    }
+
+    .inner {
+      max-width: 800px;
+    }
+
+    &.align-left {
+      .inner {
+        float: left;
+        text-align: left;
+      }
+    }
+
+    &.align-right {
+      .inner {
+        float: right;
+        text-align: right;
+      }
+    }
+
+    &.align-center {
+      .inner {
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+
+    .title,
+    .title h1,
+    .title h2,
+    .title h3,
+    .title h4,
+    .title h5,
+    .title h6 {
+      color: $color-black;
+      font-size: 48px;
+      line-height: 56px;
+      @include font-family($font-semibold);
+
+      @include screen(custom, max, $max-lg) {
+        font-size: 44px;
+        line-height: 52px;
+      }
+
+      @include screen(custom, max, $max-md) {
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      @include screen(custom, max, ($max-sm)) {
+        font-size: 32px;
+        line-height: 36px;
+      }
+
+      @include screen(custom, max, 374) {
+        font-size: 26px;
+        line-height: 30px;
+      }
+    }
+
+    .title {
+      color: $color-black;
+      max-width: 1284px;
+      margin: 0 auto;
+
+      &:only-child {
+        margin-bottom: -12px;
+
+        @include screen(custom, max, $max-lg) {
+          margin-bottom: -11px;
+        }
+
+        @include screen(custom, max, $max-md) {
+          margin-bottom: -10px;
+        }
+
+        @include screen(custom, max, ($max-sm)) {
+          margin-bottom: -6px;
+        }
+      }
+    }
+
+    .copy {
+      color: $color-nightrider;
+      max-width: 1284px;
+      margin: 15px auto 0;
+      font-size: 18px;
+      line-height: 24px;
+
+      @include screen(custom, max, ($max-lg)) {
+        //padding-bottom:44px;
+        margin-bottom: 12px;
+      }
+
+      @include screen(custom, max, ($max-sm)) {
+        font-size: 16px;
+        line-height: 24px;
+        //padding-bottom:34px;
+        margin: 7px auto 0;
+      }
+    }
+
+    [role="button"] {
+      font-size: 16px;
+      line-height: inherit;
+      color: $color-dimgray;
+      margin-left: 1px;
+
+      @include screen(custom, max, $max-sm) {
+        font-size: 14px;
+      }
+    }
+  }
+}

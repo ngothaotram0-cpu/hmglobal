@@ -1,0 +1,187 @@
+.GPC0054 .title-wrap:after,.GPC0054 .title-wrap:before {
+    content: " ";
+    display: table
+}
+
+.GPC0054 .title-wrap:after {
+    clear: both
+}
+
+.GPC0054.bg-black {
+    background-color: #000
+}
+
+.GPC0054.bg-black .title-wrap .title {
+    color: #fff
+}
+
+.GPC0054.bg-black .title-wrap .title h1,.GPC0054.bg-black .title-wrap .title h2,.GPC0054.bg-black .title-wrap .title h3,.GPC0054.bg-black .title-wrap .title h4,.GPC0054.bg-black .title-wrap .title h5,.GPC0054.bg-black .title-wrap .title h6 {
+    color: #fff
+}
+
+.GPC0054.bg-black .title-wrap .copy {
+    color: #f8f8f8
+}
+
+.GPC0054.bg-dark-gray {
+    background-color: #333
+}
+
+.GPC0054.bg-dark-gray .title-wrap .title {
+    color: #fff
+}
+
+.GPC0054.bg-dark-gray .title-wrap .title h1,.GPC0054.bg-dark-gray .title-wrap .title h2,.GPC0054.bg-dark-gray .title-wrap .title h3,.GPC0054.bg-dark-gray .title-wrap .title h4,.GPC0054.bg-dark-gray .title-wrap .title h5,.GPC0054.bg-dark-gray .title-wrap .title h6 {
+    color: #fff
+}
+
+.GPC0054.bg-dark-gray .title-wrap .copy {
+    color: #f8f8f8
+}
+
+.GPC0054.bg-gray {
+    background-color: #f8f8f8
+}
+
+.GPC0054.bg-white {
+    background-color: #fff
+}
+
+.GPC0054 .title-wrap {
+    width: 100%;
+    padding: 10px 30px 0;
+    max-width: 1344px;
+    margin: 0 auto 44px
+}
+
+@media (max-width: 1199px) {
+    .GPC0054 .title-wrap {
+        padding-top:15px
+    }
+}
+
+@media (max-width: 767px) {
+    .GPC0054 .title-wrap {
+        padding:33px 24px 0;
+        margin-bottom: 35px
+    }
+}
+
+.GPC0054 .title-wrap .inner {
+    max-width: 800px
+}
+
+.GPC0054 .title-wrap.align-left .inner {
+    float: left;
+    text-align: left
+}
+
+.GPC0054 .title-wrap.align-right .inner {
+    float: right;
+    text-align: right
+}
+
+.GPC0054 .title-wrap.align-center .inner {
+    margin: 0 auto;
+    text-align: center
+}
+
+.GPC0054 .title-wrap .title,.GPC0054 .title-wrap .title h1,.GPC0054 .title-wrap .title h2,.GPC0054 .title-wrap .title h3,.GPC0054 .title-wrap .title h4,.GPC0054 .title-wrap .title h5,.GPC0054 .title-wrap .title h6 {
+    color: #000;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 600
+}
+
+@media (max-width: 1199px) {
+    .GPC0054 .title-wrap .title,.GPC0054 .title-wrap .title h1,.GPC0054 .title-wrap .title h2,.GPC0054 .title-wrap .title h3,.GPC0054 .title-wrap .title h4,.GPC0054 .title-wrap .title h5,.GPC0054 .title-wrap .title h6 {
+        font-size:44px;
+        line-height: 52px
+    }
+}
+
+@media (max-width: 991px) {
+    .GPC0054 .title-wrap .title,.GPC0054 .title-wrap .title h1,.GPC0054 .title-wrap .title h2,.GPC0054 .title-wrap .title h3,.GPC0054 .title-wrap .title h4,.GPC0054 .title-wrap .title h5,.GPC0054 .title-wrap .title h6 {
+        font-size:40px;
+        line-height: 48px
+    }
+}
+
+@media (max-width: 767px) {
+    .GPC0054 .title-wrap .title,.GPC0054 .title-wrap .title h1,.GPC0054 .title-wrap .title h2,.GPC0054 .title-wrap .title h3,.GPC0054 .title-wrap .title h4,.GPC0054 .title-wrap .title h5,.GPC0054 .title-wrap .title h6 {
+        font-size:32px;
+        line-height: 36px
+    }
+}
+
+@media (max-width: 374px) {
+    .GPC0054 .title-wrap .title,.GPC0054 .title-wrap .title h1,.GPC0054 .title-wrap .title h2,.GPC0054 .title-wrap .title h3,.GPC0054 .title-wrap .title h4,.GPC0054 .title-wrap .title h5,.GPC0054 .title-wrap .title h6 {
+        font-size:26px;
+        line-height: 30px
+    }
+}
+
+.GPC0054 .title-wrap .title {
+    color: #000;
+    max-width: 1284px;
+    margin: 0 auto
+}
+
+.GPC0054 .title-wrap .title:only-child {
+    margin-bottom: -12px
+}
+
+@media (max-width: 1199px) {
+    .GPC0054 .title-wrap .title:only-child {
+        margin-bottom:-11px
+    }
+}
+
+@media (max-width: 991px) {
+    .GPC0054 .title-wrap .title:only-child {
+        margin-bottom:-10px
+    }
+}
+
+@media (max-width: 767px) {
+    .GPC0054 .title-wrap .title:only-child {
+        margin-bottom:-6px
+    }
+}
+
+.GPC0054 .title-wrap .copy {
+    color: #333;
+    max-width: 1284px;
+    margin: 15px auto 0;
+    font-size: 18px;
+    line-height: 24px
+}
+
+@media (max-width: 1199px) {
+    .GPC0054 .title-wrap .copy {
+        margin-bottom:12px
+    }
+}
+
+@media (max-width: 767px) {
+    .GPC0054 .title-wrap .copy {
+        font-size:16px;
+        line-height: 24px;
+        margin: 7px auto 0
+    }
+}
+
+.GPC0054 .title-wrap [role=button] {
+    font-size: 16px;
+    line-height: inherit;
+    color: #6b6b6b;
+    margin-left: 1px
+}
+
+@media (max-width: 767px) {
+    .GPC0054 .title-wrap [role=button] {
+        font-size:14px
+    }
+}
+
+/*# sourceMappingURL=maps/GPC0054.min.css.map */
