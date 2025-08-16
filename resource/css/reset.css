@@ -1,0 +1,54 @@
+
+@charset 'utf-8';
+@font-face {
+    font-family:'LGSmHaR'; font-style:normal; font-weight:400;
+    src:url('fonts/LG_Smart_Regular.eot');
+    src:url('fonts/LG_Smart_Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/LG_Smart_Regular.woff') format('woff'),
+    url('fonts/LG_Smart_Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family:'LGSmHaSB'; font-style:normal; font-weight:500;
+    src:url('fonts/LG_Smart_SemiBold.eot');
+    src:url('fonts/LG_Smart_SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/LG_Smart_SemiBold.woff') format('woff'),
+    url('fonts/LG_Smart_SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family:'LGSmHaB'; font-style:normal; font-weight:600;
+    src:url('fonts/LG_Smart_Bold.eot');
+    src:url('fonts/LG_Smart_Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/LG_Smart_Bold.woff') format('woff'),
+    url('fonts/LG_Smart_Bold.ttf') format('truetype');
+}
+
+/* common */
+html, body{height:100%;}
+body{margin:0; padding:0; font-family:"LG Smart", "Segoe UI", "Microsoft Sans Serif", sans-serif; font-size:12px; line-height:1.2; color:#333;}
+a, a:hover, a:focus{color:#000; text-decoration:none !important;}
+hr, caption, legend{display:none !important;}
+colgroup{background:none;}
+h1, h2, h3, h4, h5, h6{font-size:100%; line-height:1.2;}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, form, fieldset, table, caption, tbody, tfoot, thead, tr, th, td, figure, figcaption, img{margin:0; padding:0; border:0;}
+ul, ol, li{list-style:none;}
+table{clear:both; width:100%; border-spacing:0; border:0;}
+p, div, th, td{font-size:100%;}
+img, input, select, textarea{vertical-align:middle;}
+input, select, textarea, button{font-family:'LGSmHaR'; font-size:100%;}
+textarea{resize:none;}
+input[type="submit"], button{cursor:pointer;}
+button::-moz-focus-inner{padding:0; border:0;}
+select{appearance:none;}select::-ms-expand{display:none;}
+input{outline:none;}
+input::-ms-clear, input::-ms-reveal{display:none;}
+
+/* bootstrap fix */
+.modal-cookie-setting{position:fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1050; display: none; overflow: hidden; outline: 0;}
+.modal-cookie-setting.modal.modal-simple .modal-dialog{position: relative; left: 50%; display: inline-block; max-width: 100%; width: 400px; margin-left: 0; vertical-align: middle; text-align: left; transform: translateX(-50%);}
+.modal-cookie-setting .modal-content{background:#fff;}
+.modal-cookie-setting.modal.modal-simple .modal-dialog .modal-body .first-section .m-title{padding: 0 0 7px; margin: -1px 0 0 0; font-weight: 600; color: #333; font-size: 24px; line-height: 32px;}
+.modal-cookie-setting.modal.modal-simple .modal-dialog .modal-body .first-section .m-desc{padding: 0; margin: 0; font-style: normal; font-weight: 400; color: #6b6b6b; font-size: 14px; line-height: 20px;}
+.modal-cookie-setting.modal.modal-simple .modal-dialog .modal-body .first-section .btn-area .btn{display: block; min-width: 100%; font-weight: 600; font-size: 14px;}
+.modal-cookie-setting.modal.modal-simple .modal-dialog .modal-body .first-section .m-desc .comment-accept-all,
+.modal-cookie-setting.modal.modal-simple .modal-dialog .modal-body .first-section .m-desc .toggle-setting-area{text-decoration:underline !important;}
+

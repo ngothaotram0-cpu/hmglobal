@@ -1,0 +1,240 @@
+@charset 'utf-8';
+
+.step{ width: 100%; box-sizing:border-box; padding:0 6.2%; border: 1px solid #cbcbcb; background:#fcfcfc;}
+.step ol{width:100%; margin:0 auto; padding:35px 0;}
+.step ol:after{clear:both; display:block; content:'';}
+.step li{float:left; width: 20.2%; margin-right:6.4%; text-align:center;}
+.step li:last-child{margin:0; background:none;}
+.step li:last-child .img:after{display:none;}
+.step li img{width:100%; max-width:226px}
+.step .img{position:relative;}
+.step .img:after{position:absolute; top:55%; right:-28.76%; width:28.76%; height:60px; margin:-30px 0 0; content:''; background:url(/resource/images/culture/lg_growth_arr.png) no-repeat 0 center; background-size:100% auto;}
+.step ol li h4 {font-family: "LGSmHaB"; font-size: 20px; color: #a50034; margin-bottom: 10px;}
+.step li p{font-size:16px; color: #6b6b6b; line-height: 1.4em; }
+
+.tab-content > div{position:relative; font-size:18px;}
+.tab-content > div + div{padding-top:120px;}
+
+/* why */
+.why{margin-top:10px; padding-top:60px;}
+.why .title-area .em{margin:0 auto 20px;}
+.why .title-overview h2{font-size:50px; margin:120px 0 46px; }
+.why .career-overview{margin:0;}
+.why .panel{position:relative;}
+.why .panel h3{padding:35px 0 10px; font-size:26px;}
+.why .panel a {position:absolute;  display: block; width: 100%; height:100%; margin:0; border:2px solid transparent; transition:border-color .2s;}
+.why .panel p{padding:0 30px;}
+.why .panel button{position:absolute; bottom:70px; left:50%; width:220px; height:54px; margin:0 0 0 -110px; font-size:14px; font-family:'LGSmHaB'; color:#fff; border:0; border-radius:3px; background:#a50034; opacity:0; transition:opacity .2s;}
+.why .panel a:hover{z-index:2; border:2px solid #a50034;}
+.why .panel:hover button{opacity:1;}
+.why .title-overview p{font-size:20px; color:#4c5151;}
+.why .career-overview .panel:first-child{background:url(/resource/images/careers/bg_why01.jpg) no-repeat center bottom;}
+.why .career-overview .panel:nth-child(2){background:url(/resource/images/careers/bg_why02.jpg) no-repeat center bottom;}
+.why .career-overview .panel:nth-child(3){background:url(/resource/images/careers/bg_why03.jpg) no-repeat center bottom;}
+.why .career-overview .panel:nth-child(4){background:url(/resource/images/careers/bg_why04.jpg) no-repeat center bottom;}
+.why .career-overview .panel:last-child{background:url(/resource/images/careers/bg_why05.jpg) no-repeat center bottom;}
+.why .step p{margin:0 10px; color:#a50034;}
+.people{text-align:center;}
+.people h3{margin:0 0 15px; font-size:24px; color:#a50034;}
+.people p{margin:0 0 30px; font-size:18px;}
+
+.vod-wrap{position:relative; margin:0 0 30px; border-top:2px solid #a50034;}
+.vod-wrap video{width:100%;}
+.vod-wrap button{position:absolute; top:50%; left:50%; width:126px; height:126px; overflow:hidden; margin:-63px 0 0 -63px; text-indent:-9999px; border:0;}
+.vod-wrap .btn-play{background:url(/resource/images/common/btn_play.png) no-repeat center;}
+.vod-wrap .btn-pause{background:url(/resource/images/common/btn_pause.png) no-repeat center;}
+.vod-wrap .cover{position:absolute; top:0; left:0; display:none; width:100%; height:100%;}
+.interview{position:relative; padding:0 0 30px 150px; border-bottom:1px solid #a4a4a4;}
+.interview:after{clear:both; display:block; content:'';}
+.interview .picture{position:absolute; top:0; left:0; width:125px;}
+.interview .subtitle{padding:10px 0 0;}
+.interview strong{font-size:20px; color:#000;}
+.interview .info{margin:5px 0 12px; font-size:14px; color:#767676;}
+.interview .info span{margin:0 4px;}
+.interview .txt{font-size:16px;}
+
+/* areas */
+.areas{margin-top:10px; padding-top:110px; color: #333;}
+
+/* text */
+.areas .menu-areas{font-family: 'LGSmHaSB'; font-size: 32px; color: #000; text-align: center; margin: 0 0 30px;}
+.areas .txt-areas{font-size: 18px; text-align: center; margin-bottom: 80px;}
+
+/* areas overview */
+.areas-overview { position: relative; font-size: 16px; line-height: 1.5; }
+.areas-overview .title-area { position: absolute; top: calc(50% - 1px); left: calc(50% - 1px); width: 33.33333%; height: 467px; box-sizing:content-box; text-align: center; -ms-transform: translate(-50%,-50%); transform: translate(-50%,-50%); border-right: 1px solid #a4a4a4; border-bottom: 1px solid #a4a4a4;}
+.areas-overview .title-area h2 { margin: 174px 0 0px; font-size: 60px; font-family: "LGSmHaB"; color:#a50034; line-height: 1.1; }
+.areas-overview .panel-wrap { border: 1px solid #a4a4a4;}
+.areas-overview .panel-wrap:after { clear: both; display: block; content: ''; }
+.areas-overview .panel {position:relative;  float: left; width: 33.33333%; height: 467px; box-sizing: border-box; text-align: center;}               
+.areas-overview .panel:first-child { border-bottom: 1px solid #a4a4a4; border-right: 1px solid #a4a4a4; background: url("/resource/images/careers/bg_areas01.jpg") no-repeat center bottom; }
+.areas-overview .panel:nth-child(2) { border-bottom: 1px solid #a4a4a4; border-right: 1px solid #a4a4a4; background: url("/resource/images/careers/bg_areas02.jpg") no-repeat center bottom; }
+.areas-overview .panel:nth-child(3) { border-bottom: 1px solid #a4a4a4; background: url("/resource/images/careers/bg_areas03.jpg") no-repeat center bottom;}
+.areas-overview .panel:nth-child(4) { border-bottom: 1px solid #a4a4a4; border-right: 1px solid #a4a4a4; margin-right: calc(100% / 3); background: url("/resource/images/careers/bg_areas04.jpg") no-repeat center bottom; }
+.areas-overview .panel:nth-child(5) { border-bottom: 1px solid #a4a4a4; background: url("/resource/images/careers/bg_areas05.jpg") no-repeat center bottom; }
+.areas-overview .panel:nth-child(6) { border-right: 1px solid #a4a4a4; background: url("/resource/images/careers/bg_areas06.jpg") no-repeat center bottom; }
+.areas-overview .panel:nth-child(7) { border-right: 1px solid #a4a4a4; background: url("/resource/images/careers/bg_areas07.jpg") no-repeat center bottom; }
+.areas-overview .panel:last-child { background: url("/resource/images/careers/bg_areas08.jpg") no-repeat center bottom; }
+.areas-overview .panel-txt{width: 350px; margin: 0 auto; text-align: left;}
+.areas-overview .panel h3 { padding: 45px 0 10px; font-family:"LGSmHaSB"; font-size: 28px; color: #a50034; text-transform: uppercase;}
+.areas-overview .panel p { overflow:hidden; color:#6b6b6b;}
+
+/* pop-up */
+.profile-wrap{width: 880px; padding: 30px 0; border-top: 2px solid #a50034; border-bottom: 1px solid #a4a4a4;}
+.profile > img{float: left;}
+.profile{float: right; width: 246px; margin: 30px 34px 0 0; line-height: 1.3}
+.profile .tit-pro{font-family: LGSmHaSB; color: #000; font-size: 20px; margin-bottom: 20px;}
+.profile p{font-size: 16px; margin-bottom: 20px;}
+.profile > p:nth-child(3){font-size: 14px; color: #767676;}
+
+.txt-about{padding: 40px 0 0;}
+.txt-about .tit-about{font-family: LGSmHaB; font-size: 20px; color: #333; margin-bottom: 20px;}
+.txt-about .cont-about{font-size: 16px; line-height: 1.7em; margin-bottom: 58px;}
+
+.pop-content{display:none;}
+.popup-wrap span.close{margin:30px auto 40px;}
+
+/* process */
+.process{margin-top:10px; padding-top:110px;}
+.process .desc {font-size:16px; text-align:center; margin-top:20px;}
+.process .desc span {display:inline-block;}
+.process .desc a {color:#a50034; text-decoration: underline;}
+
+#career-faq{padding:120px 0 0;}
+.faq-list{margin:0 0 120px; border-top:1px solid #bcbcbc;}
+.faq-list dl{margin:0; line-height:1.6; border-bottom:1px solid #bcbcbc;}
+.faq-list dt{font-size:22px; background:url(/resource/images/careers/blt_q.png) no-repeat 40px center;}
+.faq-list dd{display:none; margin:0; padding:28px 80px; font-size:18px; border-top:1px solid #e1e1e1; background:#fafafa;}
+.faq-list button{display:block; width:100%; box-sizing:border-box; padding:25px 80px 23px; text-align:left; border:0; background:none;}
+.faq-list .active dd{display:block;}
+
+@media screen and (max-width:1283px){
+	.step li h4 {font-size: 18px; margin-bottom: 5px;}
+	.step li p { font-size: 14px;}
+	.step li img{width:100%; max-width:215px}
+	
+	.interview{padding-left:100px;}
+	.interview .picture{width:80px;}
+	.interview .picture img{width:100%;}
+	
+	.why .title-overview h2{margin: 78px 0 36px}
+	.why .panel h3{font-size:20px;}
+	.areas-overview .panel-txt{width:100%; box-sizing:border-box; padding:0 20px;}
+	.areas-overview .panel p{font-size:14px;}
+	.areas-overview .panel:first-child{background-size:60px auto;}
+	.areas-overview .panel:nth-child(2){background-size:40px auto;}
+	.areas-overview .panel:nth-child(3){background-size:80px auto;}
+	.areas-overview .panel:nth-child(4){margin-right: calc(100% / 3); background-size:50px auto;}
+	.areas-overview .panel:nth-child(5){background-size:75px auto;}
+	.areas-overview .panel:nth-child(6){background-size:50px auto;}
+	.areas-overview .panel:nth-child(7){background-size:55px auto;}
+	.areas-overview .panel:last-child{background-size:60px auto;}
+	
+	.areas-overview .title-area{height:390px;}
+	.areas-overview .title-area h2{margin-top:120px;}
+	.areas-overview .title-overview h2{margin:50px 0 20px; font-size:40px;}
+	.areas-overview .title-overview p{padding:0 15px; font-size:18px;}
+	.areas-overview .title-overview p br{display:none;}
+	.areas-overview .panel{height:390px;}
+	.areas-overview .panel h3{padding:35px 0 10px; font-size:20px;}
+	.areas-overview .panel p{padding:0;}
+	.areas-overview .panel br{display:none;}
+	
+	.faq-list dt{font-size:20px;}
+	.faq-list dd{font-size:16px;}
+}
+
+@media screen and (max-width: 991px) {
+	.areas-overview .title-area{display:none;}
+	.areas-overview .panel-wrap{border:0; border-top:1px solid #a4a4a4; border-left:1px solid #a4a4a4;}
+	.areas-overview .panel{width:50%; border:0; border-bottom:1px solid #a4a4a4; border-right:1px solid #a4a4a4;}
+	.areas-overview .panel:nth-child(4){margin-right:0;}
+	.why .title-overview h2{margin:70px 0 26px; font-size:48px;}
+	.why .title-overview p{font-size:18px;}
+	.why .panel h3{padding:20px 0 10px;}
+	
+	.areas-overview .panel{height:332px;}
+	.step ol li h4{font-size:18px;}
+	
+	.faq-list dt{font-size:18px;}
+	.faq-list dd{font-size:15px;}
+}
+
+@media screen and (max-width:767px){
+	.tab-content > div{font-size:13px;}
+	.tab-content > div + div{padding-top:55px;}
+	
+	.interview{padding-left:75px; padding-bottom:15px;}
+	.interview .picture{width:60px;}
+	.interview .subtitle{padding:0;}
+	.interview strong{font-size:14px;}
+	.interview .info{font-size:10px;}
+	.interview .txt{font-size:12px;}
+	.overlay span.close{width:125px; height:30px; font-size:12px; line-height:30px;}
+	.popup-wrap span.close{margin:15px auto 20px;}
+	.vod-wrap .btn-play{width:62px; height:62px; margin:-31px 0 0 -31px; background-size:100% auto;}
+	
+	.step{margin-bottom:15px;}
+	.step li{width:44%; margin:0 12% 0 0;}
+	.step li:nth-child(even){margin:0;}
+	.step li:nth-child(2) .img:after{top:80%; left:6px; transform:rotate(135deg); position:absolute; width:28.76%; height:80px; margin:10% 0 0 -32%; background-size:100% auto;}
+	.step li:nth-child(2) .step-arr:after{height:148px}
+	.step ol{padding: 18px 0;}
+	.step ol li:nth-child(3) p{margin:0 0;}
+	.step ol li h4 {font-size: 13px; margin-bottom: 5px;}
+	.step ol li p { font-size: 10px;}
+
+	.careers .tab-menu{width:100%;}
+
+	.why{margin-top:10px; padding-top:50px;}
+	.why .panel h3{font-size:14px;}
+	.why .panel p{padding:0 10px;}
+	.why .title-area p{margin-bottom:25px;}
+	.why .step{margin-bottom:0;}
+	.why .title-overview h2{font-size:42px; margin:0;}
+	.why .title-area .em{font-family:"LGSmHaSB";}o
+	
+	.people h3{font-size:15px;}
+	.people p{margin:0 0 15px; font-size:13px;}
+	
+	.areas{margin-top:5px; padding-top:55px;}
+	.areas-overview .title-area{display:none;}
+	.areas-overview .panel-wrap{border:0;}
+	.areas-overview .panel{float:none; width:100%; height:auto; margin:0 0 15px; padding:15px 15px 78px; border:1px solid #a4a4a4;}
+	.areas-overview .panel:last-child{margin:0;}
+	.areas-overview .panel h3{padding:0 0 15px; font-size:15px;}
+	.areas-overview .panel p{font-size:13px;}
+	.areas-overview .panel-txt{width:100%; padding:0; text-align:center;}
+	.areas-overview .panel:first-child{background: url("/resource/images/careers/bg_areas01_m.jpg") no-repeat center bottom; background-size:47px auto;}
+	.areas-overview .panel:nth-child(2){background: url("/resource/images/careers/bg_areas02_m.jpg") no-repeat center bottom; background-size:33px auto;}
+	.areas-overview .panel:nth-child(3){background: url("/resource/images/careers/bg_areas03_m.jpg") no-repeat center bottom; background-size:63px auto;}
+	.areas-overview .panel:nth-child(4){background: url("/resource/images/careers/bg_areas04_m.jpg") no-repeat center bottom; background-size:38px auto;}
+	.areas-overview .panel:nth-child(5){background: url("/resource/images/careers/bg_areas05_m.jpg") no-repeat center bottom; background-size:56px auto;}
+	.areas-overview .panel:nth-child(6){background: url("/resource/images/careers/bg_areas06_m.jpg") no-repeat center bottom; background-size:32px auto;}
+	.areas-overview .panel:nth-child(7){background: url("/resource/images/careers/bg_areas07_m.jpg") no-repeat center bottom; background-size:47px auto;}
+	.areas-overview .panel:last-child{background: url("/resource/images/careers/bg_areas08_m.jpg") no-repeat center bottom; background-size:43px auto;}
+	
+	.process{margin-top:5px; padding:55px 0 0;}
+	.process .desc{font-size:12px;}
+	
+	#career-faq{padding:60px 0 0;}
+	.faq-list{margin:0 0 60px;}
+	.faq-list button{padding:25px 45px 23px; font-size:13px;}
+	.faq-list dt{font-family:'LGSmHaSB'; background-position:15px center; background-size:22px auto;}
+	.faq-list a,
+	.faq-list dd{padding:15px 15px 15px 45px; font-size:13px;}
+}
+
+@media screen and (max-width:430px){
+	.step li:nth-child(2) .step-arr:after{height:200px}
+}
+
+@media screen and (max-width:320px){
+	.step li:nth-child(2) .step-arr:after{height:246px; margin:10% 0 0 -35%}
+}
+
+
+
+
+
+
